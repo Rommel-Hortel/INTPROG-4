@@ -1,0 +1,256 @@
+﻿<div class="p-4">
+  <div class="container">
+      <div class="card-body rounded" style="background-color:darkgray">
+        <img src="../assets/images/logo.png" class="img-fluid rounded mx-auto d-block rounded-circle" width="25%" alt="Pet Adoption">
+      </div>
+
+      <br>
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#dogs">Dogs</a></li>
+        <li><a data-toggle="tab" href="#cats">Cats</a></li>
+      </ul>
+
+      <div class="card-body border">
+
+      <div class="tab-content p-5">
+        <div id="dogs" class="tab-pane fade in active">
+          <div class="row">
+            <div class="col">
+              <h3>Breed</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">Golden Retriever</option>
+                <option value="2">German Shepherd</option>
+                <option value="3">French Bulldog</option>
+              </select>
+            </div>
+            <div class="col">
+              <h3>Sex</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            <div class="col">
+              <h3>Age</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3>Color</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">Red</option>
+                <option value="2">Green</option>
+                <option value="3">Blue</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <h3>Size</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>ANY</option>
+                <option value="1">X-Small</option>
+                <option value="2">Small</option>
+                <option value="3">Medium</option>
+                <option value="4">Large</option>
+                <option value="5">X-Large</option>
+              </select>
+            </div>
+            
+            <div class="col">
+              
+              <h3 class="d-flex justify-content-center  mb-5 p-3" style="width:100%"></h3>
+              <form id="search-form" class="d-flex align-items-center justify-content-center w-100" action="/search" method="GET">
+                <label for="search-input" class="form-label me-2"></label>
+                <input id="search-input" type="text" name="query" class="form-control me-2" placeholder="Enter pet name" required>
+                <button type="submit" class="btn btn-primary p-2" style="width: auto;">
+                  <i class="fa fa-search"></i> Search
+                </button>
+              </form>
+            </div>
+            
+            <!-- Optional CSS for additional styling -->
+            <style>
+              .form-label {
+                margin-right: 10px;
+                font-weight: bold;
+              }
+              .form-control {
+                width: auto;
+                flex-grow: 1;
+              }
+              .btn-primary {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .btn-primary i {
+                margin-right: 5px;
+              }
+              </style>
+                  
+               <!-- Optional JavaScript for enhanced user experience -->
+             <script>
+            document.getElementById('search-form').addEventListener('submit', function(event) {
+             const query = document.querySelector('input[name="query"]').value;
+              if (!query) {
+              event.preventDefault();
+              alert('Please enter a search term.');
+               }
+               });
+             </script>
+            
+            </div>
+          </div>
+          <h3>Search Results:</h3>
+          <br>
+          <div class="container">
+              <div class="row">
+                <div class="col-2">
+                  <img src="../assets/images/nick.jpg" class="img-fluid rounded rounded-circle" width="100px" height="100px" alt="Bobby">
+                  <p>Nick is friendly</p>
+                </div>
+                <div class="col-2">
+                  <img src="../assets/images/billy.jpeg" class="img-fluid rounded rounded-circle" width="100px" height="100px" alt="Scott">
+                  <p>Billy is curios.</p>
+                </div>
+                <div class="col-2">
+                  <img src="../assets/images/caleb.jpeg" class="img-fluid rounded rounded-circle" width="100px" height="100px" alt="Scott">
+                  <p>Caleb is bored.</p>
+                </div>
+              </div>        
+          </div>
+        </div>
+        <div id="cats" class="tab-pane fade">
+          <div class="row">
+            <div class="col">
+              <h3>Breed</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">American Bobtail</option>
+                <option value="2">Scottish Fold</option>
+                <option value="3">Maine Coon</option>
+              </select>
+            </div>
+            <div class="col">
+              <h3>Sex</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            <div class="col">
+              <h3>Age</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3>Color</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>Any</option>
+                <option value="1">Red</option>
+                <option value="2">Green</option>
+                <option value="3">Blue</option>
+              </select>
+            </div>
+            <div class="col">
+              <h3>Size</h3>
+              <select class="form-select mb-5 p-3" style="width:100%">
+                <option selected>ANY</option>
+                <option value="1">X-Small</option>
+                <option value="2">Small</option>
+                <option value="3">Medium</option>
+                <option value="4">Large</option>
+                <option value="5">X-Large</option>
+              </select>
+            </div>
+            
+            <div class="col">
+              
+              <h3 class="d-flex justify-content-center  mb-5 p-3" style="width:100%"></h3>
+              <form id="search-form" class="d-flex align-items-center justify-content-center w-100" action="/search" method="GET">
+                <label for="search-input" class="form-label me-2"></label>
+                <input id="search-input" type="text" name="query" class="form-control me-2" placeholder="Enter pet name" required>
+                <button type="submit" class="btn btn-primary p-2" style="width: auto;">
+                  <i class="fa fa-search"></i> Search
+                </button>
+              </form>
+            </div>
+            
+            <!-- Optional CSS for additional styling -->
+            <style>
+              .form-label {
+                margin-right: 10px;
+                font-weight: bold;
+              }
+              .form-control {
+                width: auto;
+                flex-grow: 1;
+              }
+              .btn-primary {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .btn-primary i {
+                margin-right: 5px;
+              }
+            
+            </style>
+            
+            <!-- Optional JavaScript for enhanced user experience -->
+            <script>
+              document.getElementById('search-form').addEventListener('submit', function(event) {
+                const query = document.querySelector('input[name="query"]').value;
+                if (!query) {
+                  event.preventDefault();
+                  alert('Please enter a search term.');
+                }
+              });
+            </script>
+            
+            
+            </div>
+          </div>
+          <h3>Search Results:</h3>
+          <br>
+          <div class="container">
+              <div class="row">
+                <div class="col-2">
+                  <img src="../assets/images/bobby.jpg" class="img-fluid rounded rounded-circle" width="100px" height="100px" alt="Bobby">
+                  <p>Bobby is carefree</p>
+                </div>
+                <div class="col-2">
+                  <img src="../assets/images/scott.jpg" class="img-fluid rounded rounded-circle" width="100px" height="100px" alt="Scott">
+                  <p>Scott is grumpy</p>
+                </div>
+                <div class="col-2">
+                  <img src="../assets/images/manny.jpg" class="img-fluid rounded rounded-circle" width="100px" height="100px" alt="Scott">
+                  <p>Manny is pacquiao</p>
+                </div>
+              </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+

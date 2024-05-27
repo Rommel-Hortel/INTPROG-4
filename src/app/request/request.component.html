@@ -1,0 +1,125 @@
+<div class="p-4 bground">
+    <div class="container">
+        <div class="card-body rounded mx-auto d-block" style="background-color:darkgray;padding: 50px;width: 75%;">
+            <img src="../assets/images/logo.png" class="img-fluid rounded rounded-circle" style="float:left" width="100px" alt="Pet Adoption">
+            <h3><strong>Adopt a Friend</strong></h3>
+            <h4 class="text-primary"><strong>Pet Adoption Form</strong></h4>
+            <br>
+            <hr class="new1">
+
+            <form>
+                <div class="form-row mb-5">
+                    <div class="form-group col-6">
+                        <h4><strong>Name:</strong></h4>
+                        <input type="text" formControlName="firstName" class="form-control" placeholder="Enter First Name"/>
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-6">
+                        <h4><strong>Name:</strong></h4>
+                        <input type="text" formControlName="lastName" class="form-control" placeholder="Enter Last Name" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-5">
+                    <h4><strong>Address:</strong></h4>
+                    <input type="text" formControlName="email" class="form-control" placeholder="Enter Email Address"/>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group mb-5">
+                    <h4><strong>Number:</strong></h4>
+                    <input type="text" formControlName="contact" class="form-control" placeholder="Enter Contact Number"/>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.contact.errors.required">Contact Number is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4><strong>Address:</strong></h4>
+                    <input type="text" formControlName="address" class="form-control" placeholder="Enter Street Address"/>
+                    <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                        <div *ngIf="f.address.errors.required">Address is required</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <input type="text" formControlName="firstName" class="form-control" placeholder="Enter City"/>
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" formControlName="lastName" class="form-control" placeholder="Enter Region" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row mb-5">
+                    <div class="form-group col-6">
+                        <input type="text" formControlName="firstName" class="form-control" placeholder="Enter Postal/Zip Code"/>
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" formControlName="lastName" class="form-control" placeholder="Enter Country" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="new1">
+                <h4><strong>Type of Pet:</strong></h4>
+                <div class="form-group form-check form-check-inline">
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="height:25px; width:25px; vertical-align: middle;">
+                        <label class="form-check-label" for="inlineRadio1" style="font-size: 10pt;">Dog</label>
+                    </div>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="height:25px; width:25px; vertical-align: middle;">
+                        <label class="form-check-label" for="inlineRadio2" style="font-size: 10pt;">Cat</label>
+                    </div>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" style="height:25px; width:25px; vertical-align: middle;">
+                        <label class="form-check-label" for="inlineRadio3" style="font-size: 10pt;">Others</label>
+                    </div>
+                </div>
+                <h4><strong>Name of pet you are adopting:</strong></h4>
+                <input type="text" formControlName="petname" class="form-control mb-5" placeholder="Enter Name of Pet"/>
+                <div *ngIf="submitted && f.petname.errors" class="invalid-feedback">
+                    <div *ngIf="f.petname.errors.required">Petname is required</div>
+                </div>
+                <h4><strong>How many hours a day will this pet be left alone?</strong></h4>
+                <input type="text" formControlName="hours" class="form-control mb-5" placeholder="Enter your answer"/>
+                <div *ngIf="submitted && f.hours.errors" class="invalid-feedback">
+                    <div *ngIf="f.hours.errors.required">Your response is required</div>
+                </div>
+                <h4><strong>Who will be responsible for cleaning, feeding, and exercising this pet?</strong></h4>
+                <input type="text" formControlName="response" class="form-control mb-5" placeholder="Enter your answer"/>
+                <div *ngIf="submitted && f.response.errors" class="invalid-feedback">
+                    <div *ngIf="f.response.errors.required">Your response is required</div>
+                </div>
+                <h4><strong>Pet Alergies?</strong></h4>
+                <div class="form-group form-check form-check-inline mb-5">
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="height:25px; width:25px; vertical-align: middle;">
+                        <label class="form-check-label" for="inlineRadio1" style="font-size: 10pt;">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="height:25px; width:25px; vertical-align: middle;">
+                        <label class="form-check-label" for="inlineRadio2" style="font-size: 10pt;">No</label>
+                    </div>
+                </div>
+                <button class="btn btn-secondary p-3" style="width: 100%;">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
