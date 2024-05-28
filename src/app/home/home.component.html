@@ -68,12 +68,14 @@
               </select>
             </div>
             
-            <div class="col">
+            <div class="col" style="margin-top: -10px;">
               
               <h3 class="d-flex justify-content-center  mb-5 p-3" style="width:100%"></h3>
               <form id="search-form" class="d-flex align-items-center justify-content-center w-100" action="/search" method="GET">
+                <div class="search-input-container">
                 <label for="search-input" class="form-label me-2"></label>
                 <input id="search-input" type="text" name="query" class="form-control me-2" placeholder="Enter pet name" required>
+              </div>
                 <button type="submit" class="btn btn-primary p-2" style="width: auto;">
                   <i class="fa fa-search"></i> Search
                 </button>
@@ -89,14 +91,21 @@
               .form-control {
                 width: auto;
                 flex-grow: 1;
+                
               }
               .btn-primary {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                
               }
               .btn-primary i {
-                margin-right: 5px;
+                margin-right: 10px;
+                
+              }
+              .search-input-container{
+                display: flex;
+                align-items: center;
               }
               </style>
                   
@@ -185,7 +194,7 @@
               </select>
             </div>
             
-            <div class="col">
+            <div class="col" style="margin-top: -10px;">
               
               <h3 class="d-flex justify-content-center  mb-5 p-3" style="width:100%"></h3>
               <form id="search-form" class="d-flex align-items-center justify-content-center w-100" action="/search" method="GET">
